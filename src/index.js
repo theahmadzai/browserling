@@ -1,8 +1,8 @@
 const caniuse = require('caniuse-db/data').agents;
 
-let list = {};
+const list = {};
 
-for (let browser in caniuse) {
+for (const browser in caniuse) {
     list[browser] = [];
     for (let version of caniuse[browser].versions) {
         if (!version) continue;
